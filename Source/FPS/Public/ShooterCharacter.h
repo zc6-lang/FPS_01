@@ -26,5 +26,16 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 private:
+	//1st person view (arms)
+	UPROPERTY(VisibleAnywhere)
+	TObjectPtr<USkeletalMeshComponent> Mesh1P;
+	
+	UPROPERTY(VisibleAnywhere)
+	TObjectPtr<class USpringArmComponent> SpringArm;
+	
+	UPROPERTY(VisibleAnywhere)
+	TObjectPtr<class UCameraComponent> FirstPersonCamera;
+	
+	
 	
 };
