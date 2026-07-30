@@ -36,6 +36,26 @@ private:
 	UPROPERTY(VisibleAnywhere)
 	TObjectPtr<class UCameraComponent> FirstPersonCamera;
 	
+	UPROPERTY(VisibleAnywhere)
+	TObjectPtr<class UCombatComponent> Combat;
 	
+	UPROPERTY(EditDefaultsOnly,Category="FPS|Input")
+	TObjectPtr<class UInputAction> CycleWeaponAction;
+	
+	UPROPERTY(EditDefaultsOnly,Category="FPS|Input")
+	TObjectPtr<class UInputAction> FireWeaponAction;
+	
+	UPROPERTY(EditDefaultsOnly,Category="FPS|Input")
+	TObjectPtr<class UInputAction> ReloadWeaponAction;
+	
+	UPROPERTY(EditDefaultsOnly,Category="FPS|Input")
+	TObjectPtr<class UInputAction> AimWeaponAction;
+	
+	void Input_CycleWeapon();
+	void Input_ReloadWeapon();
+	void Input_FireWeapon_Pressed();
+	void Input_FireWeapon_Released();
+	void Input_Aim_Pressed();
+	void Input_Aim_Released();
 	
 };
